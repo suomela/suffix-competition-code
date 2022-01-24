@@ -1,4 +1,4 @@
-# Data for the article "New methods for analysing diachronic suffix competition across registers"
+# Code for the article "New methods for analysing diachronic suffix competition across registers"
 
 This repository contains source code connected to the following article:
 
