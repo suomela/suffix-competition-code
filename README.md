@@ -37,6 +37,11 @@ More specifically, you will find the figures in the article in the following pla
 - Figure 7: `type-ratio-result-legal/timeseries-L.pdf`
 
 
+## Requirements
+
+Please see https://github.com/suomela/type-ratio for more information on the software that you need to install, and on suitable Docker images that you can use.
+
+
 ## Author
 
 Jukka Suomela, https://jukkasuomela.fi/
