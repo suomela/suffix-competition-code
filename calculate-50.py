@@ -28,9 +28,10 @@ CLASS_SPEECH = {
 
 metadata = type_ratio.Metadata()
 metadata.datasets = ["ity", "ness"]
-metadata.dataset_labels = [ f"-{x}" for x in metadata.datasets ]
+metadata.dataset_labels = [f"-{x}" for x in metadata.datasets]
 metadata.title = "PPCEME (1500–1710) and CED (1560–1760)"
-metadata.xlabel = r"-$\it{" + metadata.datasets[0] + r"}$ and -$\it{" + metadata.datasets[1] + r"}$ types"
+metadata.xlabel = r"-$\it{" + metadata.datasets[
+    0] + r"}$ and -$\it{" + metadata.datasets[1] + r"}$ types"
 metadata.ylabel = r"Proportion of -$\it{" + metadata.datasets[0] + r"}$ types"
 metadata.timeseries_xlabel = "Time period"
 metadata.coll_labels = {
@@ -41,14 +42,14 @@ metadata.coll_colors = {
     "S": "#f26924",
     "W": "#0088cc",
 }
-metadata.periods = [ (p, p+50) for p in range(1550, 1676, 25) ]
-metadata.periods_highlight = [ ]
+metadata.periods = [(p, p + 50) for p in range(1550, 1676, 25)]
+metadata.periods_highlight = []
 metadata.tick_hook = lambda x: x[0] % 50 == 0
 metadata.shading_fraction = [0.1, 0.025]  # 80%, 95%
 metadata.yrange = [35, 53]
 metadata.trend_step = [100]
-metadata.pdf=True
-metadata.png=None
+metadata.pdf = True
+metadata.png = None
 # metadata.png=400
 
 
@@ -64,6 +65,7 @@ def get_years(x):
         return int(m.group(1)), int(m.group(2))
     assert False, x
 
+
 def parse_year(x):
     if x == "a1671":
         # PENN / tillots
@@ -74,10 +76,11 @@ def parse_year(x):
         return float(a)
     else:
         assert 1500 <= a < b < 1800, x
-        return (a+b)/2
+        return (a + b) / 2
+
 
 def get_periods(year):
-    return [ (a,b) for (a,b) in metadata.periods if a <= year < b ]
+    return [(a, b) for (a, b) in metadata.periods if a <= year < b]
 
 
 class Sample(type_ratio.Sample):
@@ -88,7 +91,7 @@ class Sample(type_ratio.Sample):
         self.year = parse_year(d["year"])
         label = f"{self.corpus} {self.sample}"
         periods = get_periods(self.year)
-        colls = [ CLASS_SPEECH[self.genre] ]
+        colls = [CLASS_SPEECH[self.genre]]
         super().__init__(label, periods, colls)
 
     def relevant(self):
@@ -104,7 +107,7 @@ class Data:
         self.samplemap = {}
 
     def read(self):
-        dataset_index = { ds: i for i, ds in enumerate(metadata.datasets) }
+        dataset_index = {ds: i for i, ds in enumerate(metadata.datasets)}
         filename = "suffix-competition/data.json"
         print(filename)
         with open(filename) as f:
@@ -138,5 +141,6 @@ def main():
     data.read()
     data.build()
     driver.calc(iter)
+
 
 main()
