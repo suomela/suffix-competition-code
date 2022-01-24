@@ -1,3 +1,6 @@
 [submodule "type-ratio"]
 	path = type-ratio
 	url = https://github.com/suomela/type-ratio.git
+[submodule "suffix-competition"]
+	path = suffix-competition
+	url = https://github.com/suomela/suffix-competition.git
