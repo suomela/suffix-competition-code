@@ -6,6 +6,7 @@ This repository contains source code connected to the following article:
 
 See also:
 
-- https://github.com/suomela/suffix-competition
-- https://github.com/suomela/type-ratio
+- https://github.com/suomela/suffix-competition: Input data
+- https://github.com/suomela/type-ratio: TypeRatio tool
+
 
