@@ -11,4 +11,6 @@ cd ..
 
 export PYTHONPATH=type-ratio
 
-./calculate-CED-PPCEME.py "$@"
+./calculate-100.py "$@"
+./calculate-50.py "$@"
+./calculate-legal.py "$@"

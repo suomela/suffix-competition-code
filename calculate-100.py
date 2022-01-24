@@ -133,7 +133,7 @@ def main():
         iter = 1_000_000
     else:
         iter = int(sys.argv[1])
-    driver = type_ratio.Driver("CED-PPCEME")
+    driver = type_ratio.Driver("100")
     data = Data(driver)
     data.read()
     data.build()
