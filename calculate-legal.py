@@ -42,7 +42,7 @@ metadata.coll_colors = {
     "L": "#0088cc",
 }
 metadata.periods = [ (p, p+100) for p in range(1500, 1651, 25) ]
-metadata.periods_highlight = [ (1600,1700) ]
+metadata.periods_highlight = [ ]
 metadata.tick_hook = lambda x: x[0] % 50 == 0
 metadata.shading_fraction = [0.1, 0.025]  # 80%, 95%
 metadata.yrange = [30, 80]
