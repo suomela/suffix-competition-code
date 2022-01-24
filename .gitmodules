@@ -1,0 +1,3 @@
+[submodule "type-ratio"]
+	path = type-ratio
+	url = https://github.com/suomela/type-ratio.git
