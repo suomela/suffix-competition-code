@@ -36,3 +36,7 @@ More specifically, you will find the figures in the article in the following pla
 - Figure 6: `type-ratio-result-50/trend-S-W.pdf`
 - Figure 7: `type-ratio-result-legal/timeseries-L.pdf`
 
+
+## Author
+
+Jukka Suomela, https://jukkasuomela.fi/
