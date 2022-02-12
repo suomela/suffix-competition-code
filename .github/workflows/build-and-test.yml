@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Update packages
+      run: sudo apt-get update -y
+    - name: Install packages
+      run: sudo apt-get install -y python3-jinja2 python3-matplotlib
+    - name: Test
+      run: ./run-all.sh 1000
